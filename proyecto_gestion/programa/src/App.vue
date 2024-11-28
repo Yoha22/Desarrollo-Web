@@ -3,6 +3,7 @@
     <button @click="goToDatosEquipo">Datos del Equipo</button>
     <button @click="goToConfiguracion">Configuración del Equipo</button>
     <button @click="goToConfiguracionRed">Configuracion de Red</button>
+    <button @click="goToCotrolCambios">Control de cambios</button>
   </nav>
   <div id="componente">
     <router-view></router-view>
@@ -20,6 +21,9 @@ export default {
     },
     goToConfiguracionRed() {
       this.$router.push('/red');
+    },
+    goToCotrolCambios() {
+      this.$router.push('/control');
     }
   }
 };
