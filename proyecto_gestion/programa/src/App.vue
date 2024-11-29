@@ -43,32 +43,43 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: absolute;
   text-align: center;
   color: #2c3e50;
 }
 
 #componente {
-  margin-top: 300px;
+  margin-top: 50px;
 }
 
 .navbar {
-  display: absolute;
-  justify-content: space-around;
-  background-color: #f8f9fa;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343a40; /* Fondo oscuro */
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
 }
 
 button {
   padding: 10px 20px;
   cursor: pointer;
   border: none;
-  background-color: #007bff;
+  background-color: #007bff; /* Azul primario */
   color: white;
   border-radius: 5px;
+  margin: 0 10px; /* Espaciado entre botones */
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+button:active {
+  transform: scale(1); /* Elimina el zoom al hacer clic */
+  background-color: #003d80; /* Azul aún más oscuro al hacer clic */
 }
 </style>
+

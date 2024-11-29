@@ -3,8 +3,8 @@
     <h2>Registro de Mantenimiento</h2>
     <!-- Listado de tablas -->
     <div v-for="(registro, index) in registros" :key="index" class="tabla-registro">
-      <table>
-        <thead>
+      <table class="table table-bordered">
+        <thead class="table-dark">
           <tr>
             <th>Preventivo</th>
             <th>Correctivo</th>
@@ -32,11 +32,12 @@
               <input
                 v-model="registro.realizo"
                 type="text"
+                class="form-control"
                 placeholder="Interno/Contratista"
               />
             </td>
             <td>
-              <input v-model="registro.fecha" type="date" />
+              <input v-model="registro.fecha" type="date" class="form-control" />
             </td>
           </tr>
         </tbody>
@@ -46,16 +47,17 @@
         <h3>Observaciones</h3>
         <textarea
           v-model="registro.observaciones"
+          class="form-control"
           placeholder="Escribe tus observaciones aquí..."
         ></textarea>
       </div>
       <!-- Botón para eliminar la tabla -->
-      <button class="btn-eliminar" @click="eliminarRegistro(index)">
+      <button class="btn btn-danger btn-sm mt-2" @click="eliminarRegistro(index)">
         Eliminar Registro
       </button>
     </div>
     <!-- Botón para agregar un nuevo registro -->
-    <button class="btn-agregar" @click="agregarRegistro">Agregar Registro</button>
+    <button class="btn btn-success mt-3" @click="agregarRegistro">Agregar Registro</button>
   </div>
 </template>
 
@@ -116,52 +118,7 @@ export default {
   padding: 10px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 10px;
-}
-
-table th,
-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
-
-table th {
-  background-color: #f4f4f4;
-}
-
 textarea {
-  width: 100%;
-  height: 60px;
   resize: none;
-  border: 1px solid #ddd;
-  padding: 8px;
 }
-
-.btn-agregar,
-.btn-eliminar {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-eliminar {
-  background-color: #dc3545;
-}
-
-.btn-agregar:hover {
-  background-color: #0056b3;
-}
-
-.btn-eliminar:hover {
-  background-color: #c82333;
-}
-</style>
+</style> 

@@ -91,8 +91,8 @@
           <button class="btn btn-primary me-2" @click="guardarDatos">
             Guardar
           </button>
-          <button class="btn btn-secondary" @click="limpiarDatos">
-            Limpiar
+          <button class="btn btn-danger" @click="limpiarDatos">
+            Eliminar
           </button>
         </div>
       </div>
