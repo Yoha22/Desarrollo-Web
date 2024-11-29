@@ -4,6 +4,7 @@ import ConfiguracionDeEquipo from './components/ConfiguracionDeEquipo.vue';
 import ConfiguracionDeRed from './components/ConfiguracionDeRed.vue';
 import controlDeCambios  from './components/controlDeCambios.vue';
 import ubicacion from './components/ubicacionTabla.vue';
+import Mantenimientos from './components/MantenimientosTabla.vue';
 
 
 const routes = [
@@ -11,7 +12,8 @@ const routes = [
     { path: '/configuracion', component: ConfiguracionDeEquipo },
     { path: '/red', component: ConfiguracionDeRed},
     {path: '/control', component:controlDeCambios},
-    {path: '/ubicacionTabla', component:ubicacion}
+    {path: '/ubicacionTabla', component:ubicacion},
+    {path:'/MantenimientosTabla',component:Mantenimientos}
 ];
 
 const router = createRouter({

@@ -5,6 +5,8 @@
     <button @click="goToConfiguracionRed">Configuracion de Red</button>
     <button @click="goToCotrolCambios">Control de cambios</button>
     <button @click="goToUbicacionTabla">Ubicacion</button>
+    <button @click="goToMantenimientos">Mantenimiento</button>
+    
   </nav>
   <div id="componente">
     <router-view></router-view>
@@ -28,6 +30,9 @@ export default {
     },
     goToUbicacionTabla(){
       this.$router.push('/ubicacionTabla');
+    },
+    goToMantenimientos(){
+      this.$router.push('/MantenimientosTabla');
     }
   }
 };
